@@ -11,7 +11,7 @@
           <template v-if="!item.hidden">
             <div
               :class="[
-                commonClass.menuItem, commonClass.unclickableMenuItem, 
+                commonClass.menuItem, commonClass.unclickableMenuItem,
                 $style.menu_item, $style.menu_item__disabled
               ]"
               :key="index"
@@ -25,7 +25,7 @@
             </div>
             <div
               :class="[
-                commonClass.menuItem, commonClass.unclickableMenuItem, 
+                commonClass.menuItem, commonClass.unclickableMenuItem,
                 $style.menu_item, $style.menu_item__available,
                 activeSubmenu.index===index? $style.menu_item_expand:null
               ]"
@@ -41,7 +41,7 @@
             </div>
             <div
               :class="[
-                commonClass.menuItem, commonClass.clickableMenuItem, 
+                commonClass.menuItem, commonClass.clickableMenuItem,
                 $style.menu_item, $style.menu_item__available
               ]"
               :key="index"
@@ -195,6 +195,7 @@ export default {
         typeof item.customClass === "string"
           ? item.customClass
           : this.customClass;
+      this.activeSubmenu.instance.parent = this;
       this.activeSubmenu.instance.$mount();
       document.body.appendChild(this.activeSubmenu.instance.$el);
     },
@@ -208,7 +209,13 @@ export default {
         !item.hidden &&
         typeof item.onClick === "function"
       ) {
-        return item.onClick();
+        if(item.onClick()){
+          this.close();
+          if(this.parent){
+            this.parent.close();
+          }
+        }
+        return ;
       }
     },
     close() {

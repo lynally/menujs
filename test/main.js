@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import EventDemo from "./EventDemo";
 import CopyDemo from "./CopyDemo";
+import ClickDemo from "./ClickDemo";
 import Contextmenu from "../";
 
 Vue.use(Contextmenu);
@@ -9,7 +10,8 @@ Vue.use(Contextmenu);
 const routes = {
    "/": App,
    "/event-demo": EventDemo,
-   "/copy-demo": CopyDemo
+   "/copy-demo": CopyDemo,
+   "/click-demo": ClickDemo
 }
 
 new Vue({

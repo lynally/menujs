@@ -4,6 +4,7 @@
     <div class="links">
       <a href="/event-demo">事件演示</a>
       <a href="/copy-demo">文字复制演示</a>
+      <a href="/click-demo">左键点击打开菜单</a>
     </div>
   </div>
 </template>

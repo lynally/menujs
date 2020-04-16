@@ -93,7 +93,7 @@ export default {
     },
     addListener() {
       if (!this.mouseListening) {
-        document.addEventListener("click", this.mouseClickListener);
+//        document.addEventListener("click", this.mouseClickListener);
         document.addEventListener("mousedown", this.mouseDownListener);
         document.addEventListener("mousewheel", this.mousewheelListener);
         this.mouseListening = true;
@@ -101,7 +101,7 @@ export default {
     },
     removeListener() {
       if (this.mouseListening) {
-        document.removeEventListener("click", this.mouseClickListener);
+//        document.removeEventListener("click", this.mouseClickListener);
         document.removeEventListener("mousedown", this.mouseDownListener);
         document.removeEventListener("mousewheel", this.mousewheelListener);
         this.mouseListening = false;
