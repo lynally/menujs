@@ -128,3 +128,6 @@ export default {
 | minWidth | 子菜单最小宽度 | `number` | — | `150` |
 | onClick | 菜单项点击事件 | `Function()` | — | — |
 | children | 子菜单结构信息 | `MenuItem[]` | — | — |
+
+
+fork的项目，做了修改，由右键改成了左键点击出菜单。

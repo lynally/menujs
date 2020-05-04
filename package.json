@@ -1,11 +1,12 @@
 {
-  "name": "vue-contextmenujs",
-  "version": "1.3.6",
-  "description": "Vue contextmenu",
+  "name": "vue-contextmenujs-lclick",
+  "version": "1.0.0",
+  "description": "Vue contextmenu , 基本原插件的修改",
   "keywords": [
     "Vue",
     "Contextmenu",
-    "右键菜单"
+    "右键菜单",
+    "左键菜单"
   ],
   "main": "index.js",
   "scripts": {
@@ -16,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/GitHub-Laziji/menujs.git"
   },
-  "author": "laziji",
+  "author": "lyn",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/GitHub-Laziji/menujs/issues"
