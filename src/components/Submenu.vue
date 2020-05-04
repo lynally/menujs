@@ -18,7 +18,10 @@
               v-if="item.disabled"
             >
               <div :class="$style.menu_item_icon" v-if="hasIcon">
-                <i :class="item.icon" v-if="item.icon"></i>
+                <!--<i :class="item.icon" v-if="item.icon"></i>-->
+                <svg aria-hidden="true" >
+                  <use :href="'#icon-'+item.icon"></use>
+                </svg>
               </div>
               <span :class="$style.menu_item_label">{{item.label}}</span>
               <div :class="$style.menu_item_expand_icon"></div>
@@ -34,7 +37,10 @@
               v-else-if="item.children"
             >
               <div :class="$style.menu_item_icon" v-if="hasIcon">
-                <i :class="item.icon" v-if="item.icon"></i>
+                <!--<i :class="item.icon" v-if="item.icon"></i>-->
+                <svg aria-hidden="true" >
+                  <use :href="'#icon-'+item.icon"></use>
+                </svg>
               </div>
               <span :class="$style.menu_item_label">{{item.label}}</span>
               <div :class="$style.menu_item_expand_icon">▶</div>
@@ -50,7 +56,11 @@
               v-else
             >
               <div :class="$style.menu_item_icon" v-if="hasIcon">
-                <i :class="item.icon" v-if="item.icon"></i>
+                <!--<i :class="item.icon" v-if="item.icon"></i>-->
+                <svg aria-hidden="true" >
+                  <!--<use href="#icon-noise"></use>-->
+                  <use :href="'#icon-'+item.icon"></use>
+                </svg>
               </div>
               <span :class="$style.menu_item_label">{{item.label}}</span>
               <div :class="$style.menu_item_expand_icon"></div>
@@ -256,9 +266,15 @@ export default {
 .menu_item_hr {
   border-bottom: 1px solid #ebeef5;
 }
-.menu_item .menu_item_icon {
+/*.menu_item .menu_item_icon {*/
+  /*margin-right: 8px;*/
+  /*width: 13px;*/
+/*}*/
+.menu_item svg {
   margin-right: 8px;
   width: 13px;
+  height: 13px;
+  margin-top: 12px;
 }
 .menu_item .menu_item_label {
   flex: 1;
