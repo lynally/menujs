@@ -1,30 +1,9 @@
 # Vue Contextmenu
 
-![](https://img.shields.io/github/languages/top/github-laziji/menujs.svg?style=flat)
-![](https://img.shields.io/github/stars/gitHub-laziji/menujs.svg?style=social)
+原来的右键触发，改成左键触发了。
+安装和配置和原组件相同。
 
 
-
-Vue 原生实现右键菜单组件, 零依赖
-
-![sample](screenshots/sample.png)
-
-
-# 在线演示
-- [事件演示](https://codepen.io/laziji/pen/vYEZebK)
-- [简单复制粘贴演示](https://codepen.io/laziji/pen/povWLYq)
-
-
-# 快速安装
-
-## npm 安装
-```
-npm install vue-contextmenujs
-```
-或
-```
-yarn add vue-contextmenujs
-```
 
 ## CDN
 ```html
